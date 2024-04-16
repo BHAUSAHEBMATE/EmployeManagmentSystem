@@ -26,7 +26,7 @@ public class empController {
 	
 	
 	
-	@RequestMapping("/indexx")
+	@RequestMapping("/")
 	public String home(Model model) {
 
 
@@ -63,7 +63,7 @@ public class empController {
    
  	   this.meth.insert(emp);
 
- 	   return "redirect:/indexx";
+ 	   return "redirect:/";
      
 	}
 	
@@ -77,7 +77,7 @@ public class empController {
 		System.out.println("home working");
 
 		
-		return "redirect:/indexx";
+		return "redirect:/";
 	}
 	
 	
@@ -114,7 +114,7 @@ public class empController {
    
  	   this.meth.insert(emp);
 
- 	   return "redirect:/indexx";
+ 	   return "redirect:/";
      
 	}
 	
@@ -128,7 +128,7 @@ public class empController {
    
  	   this.meth.delete(id);
 
- 	   return "redirect:/indexx";
+ 	   return "redirect:/";
      
 	}
 	
