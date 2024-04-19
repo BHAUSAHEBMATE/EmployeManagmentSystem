@@ -27,14 +27,9 @@ public class empController {
 	
 	
 	@RequestMapping("/")
-	public String home(Model model) {
+	public String home() {
 
 
-
-		List<employe> data =this.meth.get(null);
-		
-		
-		model.addAttribute("emp", data);
 
       	
 		
@@ -56,14 +51,15 @@ public class empController {
 
 	
 	@RequestMapping("/register")
-	public String register(@ModelAttribute employe emp) {
+	public String register(@ModelAttribute employe emp, Model model) {
 
 
-		System.out.println("registet method");
+		String added ="Employe Is Successfully Added ";
    
+		model.addAttribute("Added", added);
  	   this.meth.insert(emp);
 
- 	   return "redirect:/";
+ 	   return "redirect:/EmpData";
      
 	}
 	
@@ -108,13 +104,11 @@ public class empController {
 	@RequestMapping("/update")
 	public String update(@ModelAttribute employe emp) {
 
-		System.out.println(emp);
 
-		System.out.println("update method is working successfully");
    
  	   this.meth.insert(emp);
 
- 	   return "redirect:/";
+ 	   return "redirect:/EmpData";
      
 	}
 	
@@ -128,9 +122,34 @@ public class empController {
    
  	   this.meth.delete(id);
 
- 	   return "redirect:/";
+ 	   return "redirect:/EmpData";
+     
+	}
+	
+
+	@RequestMapping("/EmpData")
+	public String mydata(Model model) {
+
+
+
+		List<employe> data =this.meth.get(null);
+		
+		
+		model.addAttribute("emp", data);
+
+   
+
+ 	   return "EmpData";
      
 	}
 	
 	
+
+	@RequestMapping("/Service")
+	public String Service() {
+
+
+ 	   return "Service";
+     
+	}
 }

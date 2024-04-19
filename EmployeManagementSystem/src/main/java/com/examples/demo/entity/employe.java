@@ -17,11 +17,6 @@ public class employe {
 	String phoneno;
 	String salary;
 	
-	
-	
-	
-	
-	
 	public employe() {
 		// TODO Auto-generated constructor stub
 	}
@@ -149,17 +144,13 @@ public class employe {
 		this.salary = salary;
 	}
 
-
-
-
-
-
 	@Override
 	public String toString() {
 		return "employe [id=" + id + ", name=" + name + ", address=" + address + ", email=" + email + ", phoneno="
 				+ phoneno + ", salary=" + salary + "]";
 	}
 
+	
 
 
 }
