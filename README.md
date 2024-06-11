@@ -36,4 +36,4 @@ MySQL : To store and manage product data.
 💼 LinkedIn:https://www.linkdin.com/in/bhausaheb-mate
 ##  Facts
 🎮 I love playing Cricket.
-📚 I love read books .
+📚 I love read books.
